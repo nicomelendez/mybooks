@@ -28,7 +28,7 @@ export default function Footer() {
           </p>
           <p className="mx-auto max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
             {" "}
-            ¡Vota por tus libros favoritos ahora!,
+            ¡Vota por tus libros favoritos ahora!
           </p>
         </div>
 
