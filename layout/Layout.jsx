@@ -11,11 +11,9 @@ export default function Layout({ children, title }) {
         <meta name="description" content="Prueba tecnica" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="px-10 md:px-24">
+      <div className="px-5 md:px-20 xl:px-30 2xl:px-40 max-w-[1600px] mx-auto">
         <Nav />
-        <main className="grid grid-cols-1 mx-auto w-full sm:max-w-4xl lg:max-w-6xl xl:max-w-[1600px] h-full">
-          {children}
-        </main>
+        <main className="max-w-[1600px]">{children}</main>
         <Footer />
       </div>
       <ToastContainer className="text-xl" />

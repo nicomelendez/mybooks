@@ -23,12 +23,13 @@ export default function Nav() {
         >
           <LogoTipo />
         </button>
-        <div className="flex justify-center flex-col items-center gap-y-5 gap-x-0 md:flex-row md:gap-y-0 md:gap-x-5 md:justify-end">
+
+        <div className="flex flex-row justify-between text-xs gap-x-5">
           <button
             onClick={() => {
               changeRoute("/misLibros");
             }}
-            className="flex items-center shrink-0 rounded-lg bg-white px-5 py-3 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer "
+            className="flex items-center shrink-0 rounded-lg bg-white px-3 py-2 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer "
           >
             <EnBibliotecaIcon />
             &nbsp; Biblioteca
@@ -38,7 +39,7 @@ export default function Nav() {
               onClick={() => {
                 changeRoute("/login");
               }}
-              className="flex items-center shrink-0 rounded-lg bg-white px-5 py-3 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
+              className="flex items-center shrink-0 rounded-lg bg-white px-3 py-2 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
             >
               <UserIcon />
               &nbsp; Iniciar seisón

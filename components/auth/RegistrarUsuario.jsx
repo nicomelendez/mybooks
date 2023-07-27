@@ -38,14 +38,14 @@ export default function RegistrarUsuario({ isOpen }) {
     <section className="flex flex-col items-center justify-center gap-y-5">
       {!estado ? (
         <>
-          <h2 className="text-2xl font-bold text-center">
+          <h2 className="md:text-lg 2xl:text-xl font-bold text-center">
             ¡Tu opinión importa!
           </h2>
           <button
             onClick={() => {
               setEstado(!estado);
             }}
-            className="flex max-w-[170px] font-bold items-center gap-x-3 shrink-0 rounded-lg bg-white px-5 py-3 text-black hover:shadow-lg hover:bg-slate-300/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
+            className="flex text-xs items-center shrink-0 rounded-lg bg-white px-3 py-2 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer gap-2"
           >
             <UserIcon />
             Registrarme
@@ -63,11 +63,11 @@ export default function RegistrarUsuario({ isOpen }) {
             onSubmit={handleLogin}
             className="mb-0 mt-6 space-y-4 rounded-lg"
           >
-            <h3 className="text-center text-2xl font-bold text-black sm:text-4xl">
+            <h3 className="text-center text-lg md:text-2xl font-bold text-black sm:text-4xl">
               Únete a la comunidad
             </h3>
 
-            <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
+            <p className="mx-auto text-xs md:text-base 2xl:text-xl mt-4 max-w-md text-center text-gray-500">
               Expresa y comparte tus otros lectores
             </p>
 

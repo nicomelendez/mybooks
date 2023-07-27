@@ -32,11 +32,11 @@ export default function LoginUsuario() {
   return (
     <div className="mx-auto w-full pb-5">
       <form onSubmit={handleLogin} className="mb-0 mt-6 space-y-4 rounded-lg">
-        <h3 className="text-center text-2xl font-bold text-black sm:text-4xl">
+        <h3 className="text-center text-lg md:text-2xl font-bold text-black sm:text-4xl">
           Ingresa a tu cuenta
         </h3>
 
-        <p className="mx-auto mt-4 max-w-md text-center text-gray-500">
+        <p className="mx-auto mt-4 text-xs md:text-base max-w-md text-center text-gray-500">
           Expresa y comparte tus otros lectores
         </p>
 

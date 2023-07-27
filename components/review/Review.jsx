@@ -16,7 +16,7 @@ export default function Review({ user, description, rating }) {
     <article className="bg-white p-5 md:p-10 rounded-lg flex flex-col justify-center space-y-2">
       <div className="flex items-center">
         <div className="space-y-1 font-medium">
-          <p className="text-xl font-bold">{user}</p>
+          <p className="text-sm md:text-lg font-bold">{user}</p>
         </div>
       </div>
 
@@ -25,12 +25,12 @@ export default function Review({ user, description, rating }) {
           {renderRatingIcons(rating, "w-4 h-4")}
         </div>
       </div>
-      <p className="text-gray-500 pb-2 ">{displayDescription}</p>
+      <p className="text-gray-500 pb-2 text-xs md:text-sm">{displayDescription}</p>
 
       {description.length > 250 && (
         <button
           onClick={handleReadMoreClick}
-          className="block text-sm font-medium text-left text-blue-600 hover:underline"
+          className="block text-xs md:text-sm font-medium text-left text-blue-600 hover:underline"
         >
           {showFullDescription ? "Leer menos" : "Leer más"}
         </button>

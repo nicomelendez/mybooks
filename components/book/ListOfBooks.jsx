@@ -11,7 +11,7 @@ export default function ListOfBooks({ books }) {
     );
   }
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 5xl:grid-cols-4 gap-5 gap-y-10">
+    <section className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5">
       {books.map(({ book, rating, status }) => {
         const { title, cover, genre, synopsis, ISBN } = book;
         return (

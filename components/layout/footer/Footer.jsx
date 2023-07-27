@@ -11,19 +11,19 @@ export default function Footer() {
       <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
         <button
           onClick={handlerUp}
-          className="inline-block rounded-full bg-white p-2 text-white shadow transition hover:bg-gray-200/60 sm:p-3 lg:p-4 hover:shadow-lg"
+          className="inline-block rounded-full bg-white p-2 text-white shadow transition hover:bg-gray-200/60 sm:p-3 lg:p-3 hover:shadow-lg"
         >
           <UpIcon />
         </button>
       </div>
 
       <div className="space-y-7 lg:space-y-0 lg:flex lg:items-end lg:justify-between">
-        <div>
+        <div className="text-xs md:text-sm 2xl:text-lg">
           <div className="flex justify-center text-teal-600 lg:justify-start">
             <LogoTipo className="scale-75" />
           </div>
 
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
+          <p className="mx-auto max-w-md text-center leading-relaxed text-gray-500 lg:text-left">
             Explora y comparte tus opiniones en nuestra biblioteca virtual.
           </p>
           <p className="mx-auto max-w-md text-center leading-relaxed text-gray-500 lg:text-left">

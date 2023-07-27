@@ -18,11 +18,13 @@ export default function MisLibros() {
 
   return (
     <Layout title="Biblioteca">
-      <h2 className="text-center text-3xl md:text-4xl pb-8 font-bold">
-        Tu biblioteca
-      </h2>
-      <SearchMyBooks setBooks={setBooks} />
-      {books.length === 0 ? <NoBook /> : <ListOfBooks books={books} />}
+      <section className="pb-10">
+        <h2 className="text-center text-xs md:text-xl 2xl:text-3xl pb-8 font-bold">
+          Tu biblioteca
+        </h2>
+        <SearchMyBooks setBooks={setBooks} />
+        {books.length === 0 ? <NoBook /> : <ListOfBooks books={books} />}
+      </section>
     </Layout>
   );
 }

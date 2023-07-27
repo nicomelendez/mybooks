@@ -43,20 +43,21 @@ export default function Book() {
 
   return (
     <Layout title={`${title}`}>
-      <main className="w-full flex flex-col justify-center items-center">
-        <div className="flex w-full pb-10 mx-auto justify-center items-center">
+      <main className="flex flex-col items-center md:items-start gap-y-5">
+        <div className="">
           <button
             onClick={() => changeRoute("/")}
-            className="text-black bg-white hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-sm p-4 text-center inline-flex items-center "
+            className="text-black bg-white hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-sm p-3 text-center inline-flex items-center "
           >
             <BackIcon />
           </button>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-[500px_1fr] gap-y-10 xl:gap-y-0 lg:gap-x-14">
-          <div className="flex flex-col mx-auto gap-y-8">
-            <picture>
+
+        <div className="flex flex-col items-center justify-between xl:justify-around gap-x-10 md:items-start md:flex-row w-full">
+          <div className="flex flex-col gap-y-5 md:w-2/6 max-w-[330px]">
+            <picture className="mx-auto">
               <img
-                className="aspect-[2000/3227] w-[350px] h-[500px] mx-auto rounded-r-3xl"
+                className="aspect-[2000/3227] w-[220px] rounded-r-3xl"
                 src={cover}
                 alt={`Portada de ${title}`}
                 // style={{ viewTransitionName: `book-${ISBN}` }}
@@ -81,30 +82,40 @@ export default function Book() {
             )}
           </div>
 
-          <aside className="space-y-5 flex flex-col jus min-w-xl max-w-xl">
-            <h2 className="text-xl md:text-3xl flex items-center gap-x-5 font-black">
+          <aside className="space-y-5 flex flex-col pt-6 md:pt-0 max-w-[500px] xl:max-w-[600px] 2xl:max-w-[700px]">
+            <h2 className="text-sm md:text-3xl flex items-center justify-between font-bold">
               {title}
-              <span className="text-black flex bg-white text-sm text-center md:text-lg font-bold px-4 py-2 rounded">
+              <span className="text-black flex bg-white text-xs text-center md:text-xl font-bold px-4 py-2 rounded">
                 {genre}
               </span>
             </h2>
 
             <div className="flex text-amber-500">
-              {renderRatingIcons(rating, "h-6 w-6")}
+              {renderRatingIcons(rating, "w-5 h-5 md:h-6 md:w-6")}
             </div>
             <p>
-              <strong className="text-black">Autor:</strong>{" "}
-              <span className="font-semibold text-black">{author.name}</span>
+              <strong className="text-black text-xs md:text-base">
+                Autor:
+              </strong>{" "}
+              <span className="font-semibold text-black text-xs md:text-base">
+                {author.name}
+              </span>
             </p>
             <p>
-              <strong className="text-black">Año:</strong>{" "}
-              <span className="font-semibold text-black">{year}</span>
+              <strong className="text-black text-xs md:text-base">Año:</strong>{" "}
+              <span className="font-semibold text-black text-xs md:text-base">
+                {year}
+              </span>
             </p>
             <p>
-              <strong className="text-black">Paginas:</strong>{" "}
-              <span className="font-semibold text-black">{pages}</span>
+              <strong className="text-black text-xs md:text-xl">
+                Paginas:
+              </strong>{" "}
+              <span className="font-semibold text-black text-xs md:text-base">
+                {pages}
+              </span>
             </p>
-            <p>{synopsis}</p>
+            <p className="text-xs md:text-base">{synopsis}</p>
             {getUserAuth() === null ? (
               <div className="md:px-10">
                 <RegistrarUsuario isOpen={false} />

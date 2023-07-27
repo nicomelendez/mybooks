@@ -57,26 +57,29 @@ function Search() {
 
   return (
     <section className="w-full flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row justify-between items-center pb-10">
-      <div className="text-center pb-5 md:py-0 lg:text-left">
-        <h3 className="font-bold text-black text-xl md:text-2xl lg:text-3xl">
-          Cada libro cuenta una historia única.
+      <div className="text-center md:py-0 lg:text-left">
+        <h3 className="text-black font-semibold text-xs md:text-xl 2xl:text-3xl">
+          Cada libro cuenta una historia única
         </h3>
 
-        <p className="mt-1.5 text-sm md:text-lg text-gray-500">
+        <p className="mt-1.5 text-xs md:text-sm 2xl:text-lg text-gray-500">
           {getLibrosGeneros()}
         </p>
       </div>
 
-      <form onSubmit={handleBook} className="flex flex-col md:flex-row gap-5">
+      <form
+        onSubmit={handleBook}
+        className="flex items-center flex-wrap justify-center flex-row gap-5"
+      >
         <div className="relative mx-auto md:mx-0">
           <input
             type="text"
             name="data"
             placeholder="Buscar..."
-            className="w-full rounded-full border-gray-200 py-4 px-6 shadow-sm text-lg md:text-xl"
+            className="w-full rounded-full border-gray-200 py-3 px-3 shadow-sm text-sm"
           />
 
-          <span className="absolute inset-y-0 end-3 grid w-10 place-content-center">
+          <span className="absolute top-3 end-3 grid w-10 place-content-center">
             <button type="submit" className="text-gray-600 hover:text-gray-700">
               <SearchIcon />
             </button>
@@ -87,15 +90,24 @@ function Search() {
           name="filtro"
           className="bg-gray-50 border border-gray-300 text-gray-900 text-lg md:text-xl rounded-xl focus:ring-blue-500 focus:border-blue-500 p-2.5 max-w-[350px] mx-auto md:mx-0"
         >
-          <option defaultValue="true">Filtro</option>
+          <option
+            className="h-10 w-40 text-sm cursor-pointer"
+            defaultValue="true"
+          >
+            Filtro
+          </option>
           {Object.keys(AtributoBookNames).map((key) => (
-            <option key={key} value={key}>
+            <option
+              className="h-10 w-40 text-sm cursor-pointer"
+              key={key}
+              value={key}
+            >
               {AtributoBookNames[key as AtributoBook]}
             </option>
           ))}
         </select>
 
-        <div className="flex flex-col items-center cursor-pointer">
+        <div className="flex text-xs md:text-sm flex-col items-center cursor-pointer">
           <p>{!getChecked() ? "Todos" : "Disponibles"}</p>
           <label
             htmlFor="AcceptConditions"

@@ -10,12 +10,12 @@ export default function Login() {
     <Layout title={estado ? "Únete" : "Iniciar sesión"}>
       <section className="mx-auto w-full px-10 max-w-[500px]">
         {!estado ? <LoginUsuario /> : <RegistrarUsuario isOpen={true} />}
-        <div className="text-center">
+        <div className="text-center text-xs md:text-base">
           <p>
             {!estado ? "¿No tienes una cuenta?," : "¿Tienes una cuenta?,"}{" "}
             <button
               onClick={() => setEstado(!estado)}
-              className="font-bold hover:underline"
+              className="font-bold  hover:underline"
             >
               {!estado ? "Únete" : "Iniciar sesión"}
             </button>
