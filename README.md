@@ -5,7 +5,6 @@ Antes de empezar, asegúrate de realizar la siguiente configuración:
 1- Crea un archivo `.env` en la raíz del proyecto.
 Para poder usar la aplicación con todas sus funcionalidades debes crear en la raiz del proyecto un archivo .env
 2- Agrega la variable de entorno `DATABASE_URL` con la ruta de tu base de datos MongoDB en el archivo `.env`.
-Dentro de este debes crear una variable DATABASE_URL = tu_ruta_de_base_de_datos_mongo_db
 
 Ejemplo de .env:
 
