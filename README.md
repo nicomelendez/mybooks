@@ -35,6 +35,6 @@ pnpm dev
 ```
 
 Abre en tu navegador
-Una vez que la aplicación se ejecute correctamente, abre [http://localhost:3000] en tu navegador para ver la aplicación en funcionamiento.
+Una vez que la aplicación se ejecute correctamente, abre `http://localhost:3000` en tu navegador para ver la aplicación en funcionamiento.
 
 Con estos pasos, estarás listo para comenzar a usar la aplicación con todas sus funcionalidades.
