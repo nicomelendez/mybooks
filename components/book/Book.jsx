@@ -26,7 +26,7 @@ export default function Book({
   };
 
   return (
-    <article className="group relative block hover:bg-black w-full rounded-r-3xl rounded-l-lg cursor-help">
+    <article className="group relative w-[240px] block hover:bg-black md:w-full rounded-r-3xl rounded-l-lg cursor-help">
       <div className="relative">
         <img
           alt={`Portada de ${title}`}
