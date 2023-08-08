@@ -56,62 +56,67 @@ function Search() {
   }
 
   return (
-    <section className="w-full flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row justify-between items-center pb-10">
-      <div className="text-center md:py-0 lg:text-left">
-        <h3 className="text-black font-semibold text-xs md:text-xl 2xl:text-3xl">
-          Cada libro cuenta una historia única
-        </h3>
-
-        <p className="mt-1.5 text-xs md:text-sm 2xl:text-lg text-gray-500">
-          {getLibrosGeneros()}
-        </p>
-      </div>
-
+    <section className="flex flex-col gap-y-8 lg:gap-y-0 lg:flex-row justify-between items-center ">
       <form
         onSubmit={handleBook}
         className="flex items-center flex-wrap justify-center flex-row gap-5"
       >
-        <div className="relative mx-auto md:mx-0">
+        {/* <div className="relative mx-auto md:mx-0">
           <input
             type="text"
             name="data"
             placeholder="Buscar..."
-            className="w-full rounded-full border-gray-200 py-3 px-3 shadow-sm text-sm"
+            className="w-full rounded-full border-gray-200 py-3 px-3 shadow-sm text-xs"
           />
 
-          <span className="absolute top-3 end-3 grid w-10 place-content-center">
+          <span className="absolute top-3 end-1 grid w-10 place-content-center">
             <button type="submit" className="text-gray-600 hover:text-gray-700">
               <SearchIcon />
             </button>
           </span>
+        </div> */}
+        <div className="search">
+          <div className="search-box">
+            <div className="search-field">
+              <input
+                name="data"
+                placeholder="Buscar..."
+                className="input"
+                type="text"
+              />
+              <div className="search-box-icon">
+                <button type="submit" className="btn-icon-content">
+                  <i className="search-icon">
+                    <SearchIcon />
+                  </i>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <select
-          name="filtro"
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-lg md:text-xl rounded-xl focus:ring-blue-500 focus:border-blue-500 p-2.5 max-w-[350px] mx-auto md:mx-0"
-        >
-          <option
-            className="h-10 w-40 text-sm cursor-pointer"
-            defaultValue="true"
+        <div>
+          <select
+            name="filtro"
+            id="filtro"
+            className="p-[8px] w-full rounded-lg border-gray-300 text-gray-700 sm:text-sm cursor-pointer"
           >
+             <option className="cursor-pointer" defaultValue="true">
             Filtro
           </option>
-          {Object.keys(AtributoBookNames).map((key) => (
-            <option
-              className="h-10 w-40 text-sm cursor-pointer"
-              key={key}
-              value={key}
-            >
-              {AtributoBookNames[key as AtributoBook]}
-            </option>
-          ))}
-        </select>
+            {Object.keys(AtributoBookNames).map((key) => (
+              <option key={key} value={key}>
+                 {AtributoBookNames[key as AtributoBook]}
+              </option>
+            ))}
+          </select>
+        </div>
 
-        <div className="flex text-xs md:text-sm flex-col items-center cursor-pointer">
+        <div className="flex text-xs flex-col items-center cursor-pointer">
           <p>{!getChecked() ? "Todos" : "Disponibles"}</p>
           <label
             htmlFor="AcceptConditions"
-            className="relative h-8 w-12 cursor-pointer"
+            className="relative h-4 w-12 cursor-pointer"
           >
             <input
               type="checkbox"
@@ -120,10 +125,10 @@ function Search() {
               onClick={handleChangeFilter}
             />
 
-            <span className="absolute inset-0 m-auto h-2 rounded-full bg-white"></span>
+            <span className="absolute inset-0 m-auto h-1 rounded-full bg-white"></span>
 
-            <span className="absolute inset-y-0 start-0 m-auto h-6 w-6 rounded-full bg-blue-300 transition-all peer-checked:start-6 peer-checked:[&_>_*]:scale-0">
-              <span className="absolute inset-0 m-auto h-4 w-4 rounded-full bg-white transition"></span>
+            <span className="absolute inset-y-0 start-0 m-auto h-4 w-4 rounded-full bg-blue-300 transition-all peer-checked:start-8 peer-checked:[&_>_*]:scale-0">
+              <span className="absolute inset-0 m-auto h-3 w-3 rounded-full bg-white transition"></span>
             </span>
           </label>
         </div>

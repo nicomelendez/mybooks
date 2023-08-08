@@ -1,9 +1,3 @@
-import {
-  BookIcon,
-  CerrarSesionIcon,
-  EnBibliotecaIcon,
-  UserIcon,
-} from "@/components/utils/Icons";
 import LogoTipo from "@/components/utils/LogoTipo";
 import useLibrary from "@/hooks/useLibrary";
 
@@ -12,7 +6,7 @@ export default function Nav() {
     useLibrary();
 
   return (
-    <header className="w-full sm:max-w-4xl lg:max-w-6xl xl:max-w-[1600px] mx-auto py-10">
+    <header className="w-full sm:max-w-4xl lg:max-w-6xl xl:max-w-[1600px] mx-auto pt-10">
       <nav className="flex flex-col gap-y-10 md:gap-y-0 items-center justify-between md:flex-row">
         <button
           className="cursor-pointer flex justify-center"
@@ -24,37 +18,38 @@ export default function Nav() {
           <LogoTipo />
         </button>
 
-        <div className="flex flex-row justify-between text-xs gap-x-5">
-          <button
-            onClick={() => {
+        <div className="flex flex-row text-sm justify-between gap-x-5">
+          <div className="">
+            <button onClick={() => {
               changeRoute("/misLibros");
-            }}
-            className="flex items-center shrink-0 rounded-lg bg-white px-3 py-2 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer "
-          >
-            <EnBibliotecaIcon />
-            &nbsp; Biblioteca
-          </button>
-          {getUserAuth() === null ? (
-            <button
-              onClick={() => {
-                changeRoute("/login");
-              }}
-              className="flex items-center shrink-0 rounded-lg bg-white px-3 py-2 text-black hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
-            >
-              <UserIcon />
-              &nbsp; Iniciar seisón
+            }} className="button_nav">
+              <span>&nbsp;Biblioteca&nbsp;</span>
+              <span className="hover-text" aria-hidden="true">&nbsp;Biblioteca&nbsp;</span>
             </button>
-          ) : (
-            <button
-              onClick={() => {
-                loginUser(null);
-              }}
-              className="flex items-center shrink-0 rounded-lg bg-white px-5 py-3 text-black  shadow-sm hover:bg-slate-300/90 focus:ring-4 focus:outline-none focus:ring-blue-300 cursor-pointer"
-            >
-              <CerrarSesionIcon />
-              &nbsp; Cerrar sesión
-            </button>
-          )}
+          </div>
+          <div className="">
+            {getUserAuth() === null
+              ?
+              (<button
+                onClick={() => {
+                  changeRoute("/login");
+                }}
+                className="button_nav">
+                <span>&nbsp;Unirme&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;Unirme&nbsp;</span>
+              </button>)
+              :
+              (<button
+                onClick={() => {
+                  changeRoute("/login");
+                  loginUser(null)
+                }}
+                className="button_nav">
+                <span>&nbsp;Salir&nbsp;</span>
+                <span className="hover-text" aria-hidden="true">&nbsp;Salir&nbsp;</span>
+              </button>)}
+
+          </div>
         </div>
       </nav>
     </header>

@@ -11,21 +11,21 @@ export default function ListOfBooks({ books }) {
     );
   }
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-5">
+    <section className="grid two-columns sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 gap-5">
       {books.map(({ book, rating, status }) => {
-        const { title, cover, genre, synopsis, ISBN } = book;
+        const { title, cover, genre, synopsis, ISBN, author } = book;
         return (
-          <div key={ISBN} className="flex justify-center">
-            <Book
-              title={title}
-              cover={cover}
-              genre={genre}
-              synopsis={synopsis}
-              ISBN={ISBN}
-              rating={rating}
-              status={status}
-            />
-          </div>
+          <Book
+            key={ISBN}
+            title={title}
+            cover={cover}
+            genre={genre}
+            synopsis={synopsis}
+            ISBN={ISBN}
+            rating={rating}
+            status={status}
+            author={author}
+          />
         );
       })}
     </section>

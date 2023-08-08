@@ -7,7 +7,7 @@ export default function Layout({ children, title }) {
   return (
     <>
       <Head>
-        <title>MyBooks - {title}</title>
+        <title>{title} - MyBooks</title>
         <meta name="description" content="Prueba tecnica" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>

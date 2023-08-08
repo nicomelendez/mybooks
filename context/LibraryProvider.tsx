@@ -68,6 +68,18 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
     changeFilteredBooks({ books: data });
   }
 
+  function getBookForPages(numberPages: number) {
+    const data = getLibrary().books.filter(
+      (item) => item.book.pages >= numberPages
+    );
+    changeFilteredBooks({ books: data });
+  }
+
+  function getBookForGerne(genre: string) {
+    const data = getLibrary().books.filter((item) => item.book.genre === genre);
+    changeFilteredBooks({ books: data });
+  }
+
   function cargarLista() {
     const libraryData = books.library;
     Promise.all(
@@ -393,6 +405,8 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
         changeChecked,
         getDashboardBiblioteca,
         getMyLibraryFilter,
+        getBookForPages,
+        getBookForGerne
       }}
     >
       {children}
