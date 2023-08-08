@@ -38,3 +38,10 @@ Abre en tu navegador
 Una vez que la aplicación se ejecute correctamente, abre `http://localhost:3000` en tu navegador para ver la aplicación en funcionamiento.
 
 Con estos pasos, estarás listo para comenzar a usar la aplicación con todas sus funcionalidades.
+
+## Tecnologías
+
+* ![Nextjs](https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+* ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
+* ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+* ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
