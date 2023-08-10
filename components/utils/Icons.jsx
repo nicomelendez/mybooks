@@ -117,7 +117,7 @@ export function NoBookIcon() {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1024 768"
-      className="w-auto h-56 mx-auto text-black sm:h-64"
+      className="w-auto h-44 mx-auto text-black sm:h-54"
     >
       <g fill="none" fillRule="evenodd">
         <g fill="#93C5FD">

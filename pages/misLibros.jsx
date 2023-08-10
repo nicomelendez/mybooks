@@ -18,8 +18,8 @@ export default function MisLibros() {
 
   return (
     <Layout title="Biblioteca">
-      <section className="pb-10">
-        <h2 className="text-center text-xs md:text-xl 2xl:text-3xl pb-8 font-bold">
+      <section className="py-10">
+        <h2 className="text-center md:text-xl 2xl:text-3xl pb-8 font-bold">
           Biblioteca
         </h2>
         <SearchMyBooks setBooks={setBooks} />

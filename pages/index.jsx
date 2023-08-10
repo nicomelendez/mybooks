@@ -26,7 +26,7 @@ export default function Home() {
 
     return (
         <Layout title="Inicio">
-            <section className="flex flex-col items-center md:flex-row md:items-start space-y-5 justify-between py-8 md:space-y-0 md:pt-10 animate-fade-down animate-once animate-duration-300 animate-fade">
+            <section className="flex flex-col items-center md:flex-row md:items-start space-y-5 justify-between md:space-y-0 pt-10 animate-fade-down animate-once animate-duration-300 animate-fade">
                 <div className="flex flex-col w-full md:w-auto md:min-w-[200px] space-y-3">
                     <div className="flex gap-x-3 justify-center md:justify-start">
                         <h2 className="font-semibold">Filtros</h2>
