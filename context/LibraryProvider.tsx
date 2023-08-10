@@ -297,25 +297,24 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     
-    let data = conseguirStore();
+    // let data = conseguirStore();
 
-    if (data == null || (data.books && data.books.length === 0)) {
-      cargarLista();
-    } else {
-      setLibrary(data);
-    }
+    // if (data == null || (data.books && data.books.length === 0)) {
+      
+    // } else {
+    //   setLibrary(data);
+    // }
+    cargarLista();
+    // let listaFiltrada = conseguirListaFiltrada();
 
-    let listaFiltrada = conseguirListaFiltrada();
+    // if (listaFiltrada != null) {
+    //   changeFilteredBooks(listaFiltrada);
+    // }
 
-    if (listaFiltrada != null) {
-      changeFilteredBooks(listaFiltrada);
-    }
-
-    const dataUser = conseguirUser();
-    if (dataUser != null) {
-      setUserAuth(dataUser);
-    }
-    localStorage.clear();
+    // const dataUser = conseguirUser();
+    // if (dataUser != null) {
+    //   setUserAuth(dataUser);
+    // }
   }, []);
 
   useEffect(() => {
