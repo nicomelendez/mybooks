@@ -296,6 +296,7 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
+    
     let data = conseguirStore();
 
     if (data == null || (data.books && data.books.length === 0)) {
@@ -314,6 +315,7 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
     if (dataUser != null) {
       setUserAuth(dataUser);
     }
+    localStorage.clear();
   }, []);
 
   useEffect(() => {
