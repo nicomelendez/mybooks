@@ -139,7 +139,7 @@ export default function Book() {
               {displayDescription}
             </p>
 
-            {synopsis.length > 250 && (
+            {synopsis.length > 150 && (
               <button
                 onClick={handleReadMoreClick}
                 className="block text-xs md:text-sm font-medium text-left text-blue-600 hover:underline"

@@ -296,25 +296,23 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
-    
-    // let data = conseguirStore();
-
-    // if (data == null || (data.books && data.books.length === 0)) {
-      
-    // } else {
-    //   setLibrary(data);
-    // }
     cargarLista();
-    // let listaFiltrada = conseguirListaFiltrada();
+    let data = conseguirStore();
 
-    // if (listaFiltrada != null) {
-    //   changeFilteredBooks(listaFiltrada);
-    // }
+    if (data != null) {
+      setLibrary(data);
+    }
 
-    // const dataUser = conseguirUser();
-    // if (dataUser != null) {
-    //   setUserAuth(dataUser);
-    // }
+    let listaFiltrada = conseguirListaFiltrada();
+
+    if (listaFiltrada != null) {
+      changeFilteredBooks(listaFiltrada);
+    }
+
+    const dataUser = conseguirUser();
+    if (dataUser != null) {
+      setUserAuth(dataUser);
+    }
   }, []);
 
   useEffect(() => {
@@ -407,7 +405,7 @@ function LibraryProvider({ children }: { children: React.ReactNode }) {
         getDashboardBiblioteca,
         getMyLibraryFilter,
         getBookForPages,
-        getBookForGerne
+        getBookForGerne,
       }}
     >
       {children}
