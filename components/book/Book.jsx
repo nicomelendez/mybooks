@@ -29,7 +29,7 @@ export default function Book({
   };
 
   return (
-    <article className="group border relative  mx-auto md:mx-0 md:w-auto block hover:bg-[#111517] rounded-r-3xl rounded-l-lg cursor-help">
+    <article className="group border relative w-[260px] mx-auto md:mx-0 md:w-auto block hover:bg-[#111517] rounded-r-3xl rounded-l-lg cursor-help">
       <div className="relative">
         <img
           alt={`Portada de ${title}`}
@@ -41,18 +41,18 @@ export default function Book({
         <div className="absolute top-11 left-0 right-0 flex flex-col justify-end px-4 opacity-0 transition-all group-hover:opacity-100">
           <div className="space-y-2">
             <div className="flex justify-between items-center ">
-              <span className=" text-2xs font-semibold  bg-gray-100 text-gray-800 px-[4px] py-[4px] rounded border border-gray-500">
+              <span className=" text-xs md:text-2xs font-semibold  bg-gray-100 text-gray-800 px-[4px] py-[4px] rounded border border-gray-500">
                 {genre}
               </span>
               <div className="flex py-2 text-amber-500">
-                {renderRatingIcons(rating, "h-[9px] w-[9px]")}
+                {renderRatingIcons(rating, "h-[14px] w-[14px] md:h-[9px] md:w-[9px]")}
               </div>
             </div>
-            <h3 className="text-2xs text-white font-bold">{title}</h3>
-            <p className="text-2xs font-medium text-white">
+            <h3 className="text-xs md:text-2xs text-white font-bold">{title}</h3>
+            <p className="text-xs md:text-2xs font-medium text-white">
               {truncatedDescription}...
             </p>
-            <span className="text-sky-300 text-2xs font-semibold rounded  pb-5">
+            <span className="text-sky-300 text-xs md:text-2xs font-semibold rounded  pb-5">
               by {author.name}
             </span>
             <div className="flex text-xs items-center gap-x-4">
