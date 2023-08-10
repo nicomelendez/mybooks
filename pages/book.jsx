@@ -54,8 +54,8 @@ export default function Book() {
   return (
     <Layout title={`${title}`}>
       <main className="flex flex-col items-center md:items-start gap-y-5 animate-fade-down animate-once animate-duration-300 animate-fade">
-        <div className="mx-auto hover:scale-125 transition-all">
-          <button onClick={() => changeRoute("/")} className="pt-5 scale-125">
+        <div className="mx-auto hover:scale-125 transition-all pt-5">
+          <button onClick={() => changeRoute("/")} className="flex items-center justify-center rounded-full bg-white w-[30px] h-[30px]">
             <BackIcon />
           </button>
         </div>
