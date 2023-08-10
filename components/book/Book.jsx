@@ -13,9 +13,10 @@ export default function Book({
   ISBN,
   status,
   rating,
-  author
+  author,
 }) {
   const { changeStatusBook, changeRoute } = useLibrary();
+  const truncatedDescription = synopsis.slice(0, 150);
 
   const handleAddBook = () => {
     toastSucess("✅ Libro agregado!");
@@ -48,8 +49,12 @@ export default function Book({
               </div>
             </div>
             <h3 className="text-2xs text-white font-bold">{title}</h3>
-            <p className="text-2xs font-medium text-white">{synopsis}</p>
-            <span className="text-sky-300 text-2xs font-semibold rounded  pb-5">by {author.name}</span>
+            <p className="text-2xs font-medium text-white">
+              {truncatedDescription}...
+            </p>
+            <span className="text-sky-300 text-2xs font-semibold rounded  pb-5">
+              by {author.name}
+            </span>
             <div className="flex text-xs items-center gap-x-4">
               <button
                 onClick={() => {
@@ -58,10 +63,20 @@ export default function Book({
                 type="button"
                 className="text-black cursor-pointer bg-white hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-full  text-[8px] p-1.5 text-center"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[20px] h-[20px]">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-[20px] h-[20px]"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
+                  />
                 </svg>
-
               </button>
               {status === BookStatus.NOT_READ ? (
                 <button
@@ -70,7 +85,6 @@ export default function Book({
                   className="text-black cursor-pointer bg-white hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-full p-1.5 text-[8px] text-center"
                 >
                   <EnBibliotecaIcon size={"w-[18px] h-[18px]"} />
-
                 </button>
               ) : (
                 <button
@@ -78,12 +92,22 @@ export default function Book({
                   type="button"
                   className="text-black cursor-pointer bg-white hover:shadow-lg hover:bg-slate-200/90 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-full text-[8px] p-1.5 text-center"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-[18px] h-[18px]">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 011.743-1.342 48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664L19.5 19.5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-[18px] h-[18px]"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M3 3l1.664 1.664M21 21l-1.5-1.5m-5.485-1.242L12 17.25 4.5 21V8.742m.164-4.078a2.15 2.15 0 011.743-1.342 48.507 48.507 0 0111.186 0c1.1.128 1.907 1.077 1.907 2.185V19.5M4.664 4.664L19.5 19.5"
+                    />
                   </svg>
                 </button>
               )}
-
             </div>
           </div>
         </div>

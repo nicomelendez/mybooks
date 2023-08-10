@@ -20,7 +20,7 @@ export default function MisLibros() {
     <Layout title="Biblioteca">
       <section className="pb-10">
         <h2 className="text-center text-xs md:text-xl 2xl:text-3xl pb-8 font-bold">
-          Tu biblioteca
+          Biblioteca
         </h2>
         <SearchMyBooks setBooks={setBooks} />
         {books.length === 0 ? <NoBook /> : <ListOfBooks books={books} />}

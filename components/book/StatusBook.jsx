@@ -18,7 +18,7 @@ export default function StatusBook({ ISBN, status }) {
     changeClasses({
       ...initialStateEfecto,
       classButton1:
-        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full lg:h-12 lg:w-12 shrink-0",
+        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full  shrink-0",
       classLogo1:
         "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-4 after:inline-block after:border-green-500",
     });
@@ -33,9 +33,9 @@ export default function StatusBook({ ISBN, status }) {
     changeClasses({
       ...initialStateEfecto,
       classButton1:
-        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full lg:h-12 lg:w-12 shrink-0",
+        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full  shrink-0",
       classButton2:
-        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full lg:h-12 lg:w-12 shrink-0",
+        "flex items-center justify-center w-10 h-10 bg-green-500 rounded-full  shrink-0",
       classLogo1:
         "flex w-full items-center after:content-[''] after:w-full after:h-1 after:border-b after:border-4 after:inline-block after:border-green-500",
       classLogo2:
@@ -59,11 +59,11 @@ export default function StatusBook({ ISBN, status }) {
 
   if (status !== BookStatus.NOT_READ) {
     return (
-      <div className="flex flex-col">
-        <h3 className="text-center text-xl font-black transition-all duration-150 ease-linear">
+      <div className="flex flex-col animate-fade-down animate-once animate-duration-300 animate-fade md:mx-auto lg:w-full">
+        <h3 className="text-center text-sm font-black transition-all duration-150 ease-linear">
           {status}
         </h3>
-        <ol className="flex items-center mx-auto px-5 pt-5 w-full">
+        <ol className="flex items-center mx-auto pt-5 w-full">
           <li
             className={
               "transition-all duration-150 ease-linear " + classes.classLogo1
@@ -71,7 +71,7 @@ export default function StatusBook({ ISBN, status }) {
           >
             <button
               onClick={handleBlioteca}
-              className="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full lg:h-12 lg:w-12 shrink-0"
+              className="flex items-center justify-center w-10 h-10 bg-green-500 rounded-full shrink-0"
             >
               <EnBibliotecaIcon />
             </button>
